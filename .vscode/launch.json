@@ -1,0 +1,19 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "PrestoServer-Co",
+            "request": "launch",
+            "mainClass": "com.facebook.presto.server.PrestoServer",
+            "projectName": "presto-main",
+            "cwd": "${workspaceFolder}/presto-main",
+            "classPaths": ["${workspaceFolder}/presto-main/src/main/resources", "$Auto"],
+            "vmArgs": "-ea -XX:+UseG1GC -XX:G1HeapRegionSize=32M -XX:+UseGCOverheadLimit -XX:+ExplicitGCInvokesConcurrent -Xmx2G -Dconfig=etc/config.properties -Dlog.levels-file=etc/log.properties -Dcatalog.config-dir=etc/mycatalog"
+        },
+       
+    ]
+}
